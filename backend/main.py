@@ -88,7 +88,7 @@ class StudentUpdate(BaseModel):
 
 
 def load_data():
-    with open('students.json','r') as f:
+    with open('students.json', 'r') as f:
         data = json.load(f)
 
     return data

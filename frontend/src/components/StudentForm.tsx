@@ -35,7 +35,7 @@ const StudentForm = ({ initialData, isEdit = false }: StudentFormProps) => {
     const handleNestedChange = (parent: string, field: string, value: any) => {
         setFormData(prev => ({
             ...prev,
-            [parent]: { ...prev[parent as keyof typeof prev], [field]: value }
+            [parent]: { ...(prev[parent as keyof typeof prev] as any), [field]: value }
         }));
     };
 
